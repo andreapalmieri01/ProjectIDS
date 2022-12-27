@@ -3,7 +3,7 @@ import java.sql.*;
 
 public class DB_Controller {
 
-    private static final String url = "jdbc:mysql://localhost:3306/loyalty";
+    private static final String url = "jdbc:mysql://127.0.0.1:3306/loyality db";
     private static final String username = "root";
     private static final String password = "";
     private static Connection conn;
