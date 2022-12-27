@@ -8,6 +8,8 @@ public class LoyaltyProjectApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LoyaltyProjectApplication.class, args);
+
+
 	}
 
 }
