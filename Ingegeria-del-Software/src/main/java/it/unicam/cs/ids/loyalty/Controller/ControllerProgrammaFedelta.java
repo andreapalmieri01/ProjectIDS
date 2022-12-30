@@ -25,15 +25,6 @@ public class ControllerProgrammaFedelta {
         if (programFel instanceof ProgrammaLivelli){
              query = "INSERT INTO Programma_Fedelta ()";
         }
-        if (programFel instanceof ProgrammaCoalizione){
-            query = "INSERT INTO Programma_Fedelta ()";
-        }
-        if (programFel instanceof ProgrammaCashback){
-            query = "INSERT INTO Programma_Fedelta ()";
-        }
-        if (programFel instanceof ProgrammaMembership){
-            query = "INSERT INTO Programma_Fedelta ()";
-        }
         DB_Controller.insertQuery(query);
     }
 

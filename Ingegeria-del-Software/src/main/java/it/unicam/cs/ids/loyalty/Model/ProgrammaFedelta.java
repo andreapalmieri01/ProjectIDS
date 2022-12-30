@@ -10,8 +10,8 @@ public class ProgrammaFedelta {
     private String descrizione;
     private Date scadenza;
 
-    public ProgrammaFedelta(UUID id, String nome, String descrizione, Date scadenza) {
-        this.id = id;
+    public ProgrammaFedelta(String nome, String descrizione, Date scadenza) {
+        this.id = UUID.randomUUID();
         this.nome = nome;
         this.descrizione = descrizione;
         this.scadenza=scadenza;
