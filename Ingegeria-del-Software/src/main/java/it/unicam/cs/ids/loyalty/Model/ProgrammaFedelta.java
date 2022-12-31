@@ -8,13 +8,12 @@ public class ProgrammaFedelta {
     private final UUID id;
     private String nome;
     private String descrizione;
-    private Date scadenza;
 
-    public ProgrammaFedelta(String nome, String descrizione, Date scadenza) {
+
+    public ProgrammaFedelta(String nome, String descrizione) {
         this.id = UUID.randomUUID();
         this.nome = nome;
         this.descrizione = descrizione;
-        this.scadenza=scadenza;
     }
 
     public UUID getId() {
@@ -29,7 +28,4 @@ public class ProgrammaFedelta {
         return descrizione;
     }
 
-    public Date getScadenza() {
-        return scadenza;
-    }
 }

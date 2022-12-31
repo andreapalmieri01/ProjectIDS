@@ -9,8 +9,8 @@ public class ProgrammaLivelli extends ProgrammaFedelta {
    private int puntiTot;                    //punto da totalizzare per passare al livello successivo
     private int livelloVip;                 //Livello per passare alla fase Vip
 
-    public ProgrammaLivelli(String nome, String descrizione, Date scadenza, int livelloMax, int puntiTot, int livelloVip) {
-        super(nome, descrizione, scadenza);
+    public ProgrammaLivelli(String nome, String descrizione, int livelloMax, int puntiTot, int livelloVip) {
+        super(nome, descrizione);
         this.livelloMax = livelloMax;
         this.puntiTot = puntiTot;
         this.livelloVip = livelloVip;

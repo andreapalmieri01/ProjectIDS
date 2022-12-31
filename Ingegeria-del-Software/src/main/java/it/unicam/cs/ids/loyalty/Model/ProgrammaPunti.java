@@ -9,8 +9,8 @@ public class ProgrammaPunti extends ProgrammaFedelta {
     private int totPunti;       //Punti da totalizzare per ottenere coupon
     private Coupon coupon;      //vantaggio ottenibile al raggiungimento di una certa soglia di punti
 
-    public ProgrammaPunti(String nome, String descrizione, Date scadenza, double valoreXPunto, int totPunti, Coupon coupon) {
-        super(nome, descrizione, scadenza);
+    public ProgrammaPunti(String nome, String descrizione,  double valoreXPunto, int totPunti, Coupon coupon) {
+        super(nome, descrizione);
         this.valoreXPunto= valoreXPunto;
         this.totPunti= totPunti;
         this.coupon= coupon;
