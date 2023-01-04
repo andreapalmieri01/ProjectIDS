@@ -3,39 +3,55 @@ package it.unicam.cs.ids.loyalty.Model;
 import it.unicam.cs.ids.loyalty.Controller.ControllerRegistrazione;
 
 import java.util.Date;
+import java.util.UUID;
 
 public class UtenteGenerico {
+    private UUID id;
     private String Nome;
-    private String Cognome;
-    private Date dataNascita;
     private String indirizzo;
+
+    private String email;
+
+    private Number telefono;
+
+    private String username;
     private String password;
 
     private ControllerRegistrazione controllerRegistrazione;
 
-    public UtenteGenerico(String nome, String cognome, Date dataNascita, String indirizzo, String password) {
+    public UtenteGenerico(String nome, String indirizzo, String email, Number telefono,  String username, String password) {
+        this.id=UUID.randomUUID();
         this.Nome = nome;
-        this.Cognome = cognome;
-        this.dataNascita = dataNascita;
         this.indirizzo = indirizzo;
+        this.email=email;
+        this.telefono=telefono;
+        this.username=username;
         this.password=password;
     }
 
+
+    public UUID getId() {
+        return id;
+    }
 
     public String getNome() {
         return Nome;
     }
 
-    public String getCognome() {
-        return Cognome;
-    }
-
-    public Date getDataNascita() {
-        return dataNascita;
-    }
-
     public String getIndirizzo() {
         return indirizzo;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Number getTelefono() {
+        return telefono;
+    }
+
+    public String getUsername() {
+        return username;
     }
 
     public String getPassword() {

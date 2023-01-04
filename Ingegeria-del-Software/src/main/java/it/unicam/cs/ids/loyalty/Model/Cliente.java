@@ -1,42 +1,28 @@
 package it.unicam.cs.ids.loyalty.Model;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.UUID;
 
 public class Cliente extends UtenteGenerico {
 
-    private String email;
-    private Number telefono;
-    private String nomeUtente;
-    private CartaFedelta cartaFedelta;
+    private String cognome;
+    private List<CartaFedelta> carteFedelta;
 
 
-    public Cliente(String nome, String cognome, Date dataNascita, String indirizzo,String password, String email, Number telefono, String nomeUtente, CartaFedelta cartaFedelta) {
-        super(nome, cognome, dataNascita, indirizzo, password);
-        this.email = email;
-        this.telefono = telefono;
-        this.nomeUtente = nomeUtente;
-        this.cartaFedelta = cartaFedelta;
-    }
-    public Cliente(String nome, String cognome, Date dataNascita, String indirizzo, String password ,String email, Number telefono, String nomeUtente) {
-        super(nome, cognome, dataNascita, indirizzo, password);
-        this.email = email;
-        this.telefono = telefono;
-        this.nomeUtente = nomeUtente;
+    public Cliente(String nome, String cognome, String indirizzo,String username, String password, String email, Number telefono) {
+        super(nome,indirizzo, email, telefono, username, password);
+        this.cognome=cognome;
+        this.carteFedelta = new ArrayList<>();
     }
 
-    public String getEmail() {
-        return email;
+    public String getCognome() {
+        return cognome;
     }
 
-    public Number getTelefono() {
-        return telefono;
-    }
 
-    public String getNomeUtente() {
-        return nomeUtente;
-    }
-
-    public CartaFedelta getCartaFedelta() {
-        return cartaFedelta;
+    public List<CartaFedelta> getCarteFedelta() {
+        return carteFedelta;
     }
 }
