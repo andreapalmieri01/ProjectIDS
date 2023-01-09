@@ -7,12 +7,19 @@ import java.util.UUID;
 public class ProgrammaFedelta {
 
     private String nome;
+
     private String descrizione;
+
+    private static UUID id = UUID.randomUUID();
 
 
     public ProgrammaFedelta(String nome, String descrizione) {
         this.nome = nome;
         this.descrizione = descrizione;
+    }
+
+    public static UUID getId() {
+        return id;
     }
 
     public String getNome() {

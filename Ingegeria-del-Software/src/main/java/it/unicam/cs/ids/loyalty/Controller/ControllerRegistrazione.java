@@ -12,25 +12,21 @@ public class ControllerRegistrazione {
 
     private List<TitolarePuntoVendita> titolariAttivita;
 
+    private SistemaBanca sistemaBanca;
 
-    /**
-     * se il pagamento è stato effettuato correttamente
-     * @return true , altrimenti false;
-     */
 
-    public boolean payment() {
-        return true;
-    }
 
     public void registrazioneTitolari(TitolarePuntoVendita t ) throws SQLException, DateMistake {
-            if (this.validazioneDati(t)){
+        if (this.validazioneDati(t)) {
+                if (sistemaBanca.getPagamento()==StatoPagamento.PAGATO) {
+
                 this.titolariAttivita.add(t);
-                payment();
                 String query = "INSERT INTO: TITOLARE AGGIUNTO ALLA PIATTAFORMA()";
                 DB_Controller.insertQuery(query);
-            }else {
+            } else {
                 throw new DateMistake();
             }
+        }
     }
 
     /**
@@ -64,4 +60,3 @@ public class ControllerRegistrazione {
 
 
 
-}

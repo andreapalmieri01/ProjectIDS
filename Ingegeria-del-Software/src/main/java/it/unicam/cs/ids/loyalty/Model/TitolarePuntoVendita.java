@@ -16,4 +16,12 @@ public class TitolarePuntoVendita extends UtenteGenerico{
         super(nome,indirizzo, emailBusiness, telefono, username, password);
         this.carta = carta;
     }
+
+    public ControllerRegistrazione getEffettuaRegistrazione() {
+        return effettuaRegistrazione;
+    }
+
+    public CartaDiCredito getCarta() {
+        return carta;
+    }
 }
