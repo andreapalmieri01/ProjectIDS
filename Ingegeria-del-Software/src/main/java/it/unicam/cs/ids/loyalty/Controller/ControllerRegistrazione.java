@@ -18,26 +18,19 @@ public class ControllerRegistrazione {
      * @return true , altrimenti false;
      */
 
-    public boolean payment(StatoPagamento sp) {
-        if(sp == StatoPagamento.PAGATO){
-            return true;
-        }
-        return false;
+    public boolean payment() {
+        return true;
     }
 
     public void registrazioneTitolari(TitolarePuntoVendita t ) throws SQLException, DateMistake {
-        if(payment()){
             if (this.validazioneDati(t)){
-
                 this.titolariAttivita.add(t);
+                payment();
                 String query = "INSERT INTO: TITOLARE AGGIUNTO ALLA PIATTAFORMA()";
                 DB_Controller.insertQuery(query);
-            }else{
+            }else {
                 throw new DateMistake();
             }
-        }else{
-            throw new IllegalArgumentException("Pagamento non effettuato");
-        }
     }
 
     /**
@@ -54,5 +47,21 @@ public class ControllerRegistrazione {
         }
         return true;
     }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

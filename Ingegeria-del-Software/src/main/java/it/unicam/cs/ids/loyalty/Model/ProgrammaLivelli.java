@@ -5,9 +5,11 @@ import java.util.UUID;
 
 public class ProgrammaLivelli extends ProgrammaFedelta {
 
+    private static final UUID id = UUID.randomUUID();
     private int livelloMax;                 //livello massimo raggiungibile
-   private int puntiTot;                    //punto da totalizzare per passare al livello successivo
+    private int puntiTot;                    //punto da totalizzare per passare al livello successivo
     private int livelloVip;                 //Livello per passare alla fase Vip
+
 
     public ProgrammaLivelli(String nome, String descrizione, int livelloMax, int puntiTot, int livelloVip) {
         super(nome, descrizione);

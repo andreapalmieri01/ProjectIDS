@@ -4,7 +4,6 @@ import java.util.*;
 
 public class PuntoVendita extends UtenteGenerico {
 
-
     private Set<ProgrammaFedelta> programmiFedelta;
     private List<Cliente> listaClienti;
 
