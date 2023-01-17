@@ -18,7 +18,7 @@ public class ControllerRegistrazione {
 
     public void registrazioneTitolari(TitolarePuntoVendita t ) throws SQLException, DateMistake {
         if (this.validazioneDati(t)) {
-                if (sistemaBanca.getPagamento()==StatoPagamento.PAGATO) {
+            if (sistemaBanca.getPagamento()==StatoPagamento.PAGATO) {
 
                 this.titolariAttivita.add(t);
                 String query = "INSERT INTO: TITOLARE AGGIUNTO ALLA PIATTAFORMA()";
@@ -45,18 +45,3 @@ public class ControllerRegistrazione {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

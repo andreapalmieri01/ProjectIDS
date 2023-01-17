@@ -2,7 +2,6 @@ package it.unicam.cs.ids.loyalty.Model;
 
 import it.unicam.cs.ids.loyalty.Controller.ControllerRegistrazione;
 
-import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
 
