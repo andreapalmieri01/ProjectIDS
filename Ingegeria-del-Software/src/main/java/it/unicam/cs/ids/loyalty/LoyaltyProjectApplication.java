@@ -1,15 +1,16 @@
 package it.unicam.cs.ids.loyalty;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 import java.sql.SQLException;
+import java.util.Scanner;
 
-@SpringBootApplication
+
 public class LoyaltyProjectApplication {
 
+	private static final Scanner sc = new Scanner(System.in);
+
 	public static void main(String[] args) throws SQLException {
-		SpringApplication.run(LoyaltyProjectApplication.class, args);
+		DB_Controller.init();
+
 
 	}
 

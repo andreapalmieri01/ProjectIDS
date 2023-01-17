@@ -55,6 +55,10 @@ public class ControllerProgrammaFedelta {
         return false;
     }
 
+ public void confermaScelta(){
+        
+ }
+
 
 
 
