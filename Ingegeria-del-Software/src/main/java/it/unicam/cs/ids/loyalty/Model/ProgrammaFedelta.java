@@ -10,15 +10,16 @@ public class ProgrammaFedelta {
 
     private String descrizione;
 
-    private static UUID id = UUID.randomUUID();
+    private final UUID id;
 
 
     public ProgrammaFedelta(String nome, String descrizione) {
+        this.id=UUID.randomUUID();
         this.nome = nome;
         this.descrizione = descrizione;
     }
 
-    public static UUID getId() {
+    public  UUID getId() {
         return id;
     }
 

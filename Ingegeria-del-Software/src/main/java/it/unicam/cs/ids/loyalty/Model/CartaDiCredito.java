@@ -29,11 +29,11 @@ public class CartaDiCredito {
     }
 
 
-    private void incrementaSaldo(int aggiungiDenaro){
+    public void incrementaSaldo(int aggiungiDenaro){
         this.saldoCarta+=aggiungiDenaro;
     }
 
-    private void decrementaSaldo(int togliDenaro){
+    public void decrementaSaldo(int togliDenaro){
         this.saldoCarta-=togliDenaro;
     }
 

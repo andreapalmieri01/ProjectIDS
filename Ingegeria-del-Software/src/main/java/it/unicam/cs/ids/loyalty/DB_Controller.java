@@ -4,9 +4,9 @@ import java.sql.*;
 public class DB_Controller {
 //Connessione database
 
-    private static final String url = "jdbc:postgresql://localhost:5432/LoyaltyDB";
+    private static final String url = "jdbc:postgresql://localhost:5432/loyaltyDb";
     private static final String username = "postgres";
-    private static final String password = "PostgreDb";
+    private static final String password = "PostGreDb";
     private static Connection conn;
 
 

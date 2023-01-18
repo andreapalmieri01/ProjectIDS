@@ -1,5 +1,6 @@
 package it.unicam.cs.ids.loyalty.Controller;
 
+import it.unicam.cs.ids.loyalty.DB_Controller;
 import it.unicam.cs.ids.loyalty.Model.*;
 
 import java.util.ArrayList;
@@ -7,6 +8,8 @@ import java.util.List;
 import java.util.UUID;
 
 public class ControllerCarta {
+
+    private DB_Controller db_controller;
 
     private List<CartaFedelta> cartaFedeltaList;
 

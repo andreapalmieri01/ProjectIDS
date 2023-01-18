@@ -1,6 +1,7 @@
 package it.unicam.cs.ids.loyalty.Model;
 
 import it.unicam.cs.ids.loyalty.Controller.ControllerProgrammaFedelta;
+import it.unicam.cs.ids.loyalty.Controller.ControllerRegistrazione;
 
 import java.sql.SQLException;
 
@@ -8,9 +9,11 @@ public class GestorePiattaforma extends UtenteGenerico {
 
     private ControllerProgrammaFedelta controllerGestore;
 
+    private ControllerRegistrazione registrazioneTitolare;
+
     private static int costoAdesionePiattaforma = 500;
 
-    public GestorePiattaforma(String nome, String indirizzo, String email, Number telefono, String username, String password, ControllerProgrammaFedelta controllerGestore) {
+    public GestorePiattaforma(String nome, String indirizzo, String email, Number telefono, String username, String password) {
         super(nome, indirizzo, email, telefono, username, password);
 
     }
@@ -19,9 +22,14 @@ public class GestorePiattaforma extends UtenteGenerico {
         this.controllerGestore.addProgrammaFedelta(programFel);
     }
 
-    public void  eliminaProgrammaFedelta(ProgrammaFedelta programFel){
-        this.controllerGestore.deleteById(ProgrammaFedelta.getId());
+    public void visualizzaProgrammiFedelta() throws SQLException {
+        this.controllerGestore.visualizzaProgrammiFedelta();
     }
+
+    public void  eliminaProgrammaFedelta(ProgrammaFedelta programFel) throws SQLException {
+        this.controllerGestore.deleteById(programFel.getId());
+    }
+
 
     public ControllerProgrammaFedelta getControllerGestore() {
         return controllerGestore;
@@ -29,5 +37,13 @@ public class GestorePiattaforma extends UtenteGenerico {
 
     public static int getCostoAdesionePiattaforma() {
         return costoAdesionePiattaforma;
+    }
+
+    public void abilitaEsercente(TitolarePuntoVendita t) throws DateMistake, SQLException {
+        this.registrazioneTitolare.registrazioneTitolari(t);
+    }
+
+    public void visualizzaTuttiEsercentiAbilitati() throws SQLException {
+        this.registrazioneTitolare.visualizzaTitolari();
     }
 }

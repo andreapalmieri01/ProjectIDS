@@ -1,6 +1,5 @@
 package it.unicam.cs.ids.loyalty.Model;
 
-import java.util.Date;
 import java.util.UUID;
 
 public class ProgrammaPunti extends ProgrammaFedelta {
@@ -15,6 +14,10 @@ public class ProgrammaPunti extends ProgrammaFedelta {
         this.valoreXPunto= valoreXPunto;
         this.totPunti= totPunti;
         this.coupon= coupon;
+    }
+
+    public ProgrammaPunti(String nome, String descrizione) {
+        super(nome, descrizione);
     }
 
     public double getValoreXPunto() {

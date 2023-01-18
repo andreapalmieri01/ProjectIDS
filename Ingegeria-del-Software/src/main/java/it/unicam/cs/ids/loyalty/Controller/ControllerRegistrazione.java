@@ -14,6 +14,8 @@ public class ControllerRegistrazione {
 
     private SistemaBanca sistemaBanca;
 
+    private DB_Controller db_controller;
+
 
 
     public void registrazioneTitolari(TitolarePuntoVendita t ) throws SQLException, DateMistake {
@@ -21,11 +23,13 @@ public class ControllerRegistrazione {
             if (sistemaBanca.getPagamento()==StatoPagamento.PAGATO) {
 
                 this.titolariAttivita.add(t);
-                String query = "INSERT INTO: TITOLARE AGGIUNTO ALLA PIATTAFORMA()";
+                String query = "INSERT INTO: TITOLARE()";
                 DB_Controller.insertQuery(query);
             } else {
                 throw new DateMistake();
             }
+        }else {
+            throw new NullPointerException();
         }
     }
 
@@ -42,6 +46,11 @@ public class ControllerRegistrazione {
             return false;
         }
         return true;
+    }
+
+    public void visualizzaTitolari() throws SQLException {
+        String t= "titolari";
+        DB_Controller.selectAllFromTable(t);
     }
 
 }
