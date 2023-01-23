@@ -13,9 +13,9 @@ public class ControllerCarta {
 
     private List<CartaFedelta> cartaFedeltaList;
 
-    private PuntoVendita puntoVendita;
+    private CommessoPuntoVendita puntoVendita;
 
-    public ControllerCarta(PuntoVendita puntoVendita) {
+    public ControllerCarta(CommessoPuntoVendita puntoVendita) {
         this.cartaFedeltaList = new ArrayList<>();
         this.puntoVendita=puntoVendita;
     }

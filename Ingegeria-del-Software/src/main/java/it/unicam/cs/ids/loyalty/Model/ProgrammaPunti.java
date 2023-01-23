@@ -4,7 +4,6 @@ import java.util.UUID;
 
 public class ProgrammaPunti extends ProgrammaFedelta {
 
-    private static final UUID id = UUID.randomUUID();
     private double valoreXPunto;    //Valore in euro per singolo punto
     private int totPunti;       //Punti da totalizzare per ottenere coupon
     private Coupon coupon;      //vantaggio ottenibile al raggiungimento di una certa soglia di punti
@@ -18,6 +17,14 @@ public class ProgrammaPunti extends ProgrammaFedelta {
 
     public ProgrammaPunti(String nome, String descrizione) {
         super(nome, descrizione);
+    }
+
+    public ProgrammaPunti(String nome, int id) {
+        super(nome, id);
+    }
+
+    public ProgrammaPunti(String nome) {
+        super(nome);
     }
 
     public double getValoreXPunto() {

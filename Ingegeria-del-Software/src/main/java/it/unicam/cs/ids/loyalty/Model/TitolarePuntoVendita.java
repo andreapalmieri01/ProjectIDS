@@ -17,10 +17,12 @@ public class TitolarePuntoVendita extends UtenteGenerico{
     private GestorePiattaforma gestore;
     private CartaDiCredito carta;
 
-    public TitolarePuntoVendita(String nome,String indirizzo, String emailBusiness, Number telefono, String username, String password, CartaDiCredito carta) {
-        super(nome,indirizzo, emailBusiness, telefono, username, password);
+    public TitolarePuntoVendita(String nome, String cognome, String indirizzo, String emailBusiness, Number telefono, String username, String password, CartaDiCredito carta) {
+        super(nome, cognome, indirizzo, emailBusiness, telefono, username, password);
         this.carta = carta;
         this.abilitato=false;
+        this.effettuaRegistrazione= new ControllerRegistrazione();
+        this.creaProgrammaFedelta= new ControllerProgrammaFedelta();
     }
 
     public ControllerRegistrazione getEffettuaRegistrazione() {
@@ -32,7 +34,7 @@ public class TitolarePuntoVendita extends UtenteGenerico{
     }
 
     public void effettuaPagamento() throws DateMistake, SQLException {
-        gestore.abilitaEsercente(this);
+        effettuaRegistrazione.registrazioneTitolari(this);
         abilitato=true;
     }
 

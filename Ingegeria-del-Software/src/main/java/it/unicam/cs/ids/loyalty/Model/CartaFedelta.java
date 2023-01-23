@@ -11,13 +11,13 @@ public class CartaFedelta {
 
     private Date scadenza;
 
-    private final PuntoVendita cartaPuntoVendita;
+    private final CommessoPuntoVendita cartaPuntoVendita;
 
     private Cliente cliente;
 
 
 
-    public CartaFedelta(String nomeCarta, Date scadenza, PuntoVendita cartaPuntoVendita, Cliente cliente) {
+    public CartaFedelta(String nomeCarta, Date scadenza, CommessoPuntoVendita cartaPuntoVendita, Cliente cliente) {
         this.cartaPuntoVendita = cartaPuntoVendita;
         this.cliente=cliente;
         this.id=UUID.randomUUID();
@@ -25,7 +25,7 @@ public class CartaFedelta {
         this.scadenza = scadenza;
     }
 
-    public CartaFedelta( String nomeCarta, PuntoVendita cartaPuntoVendita, Cliente cliente) {
+    public CartaFedelta(String nomeCarta, CommessoPuntoVendita cartaPuntoVendita, Cliente cliente) {
         this.id=UUID.randomUUID();
         this.nomeCarta = nomeCarta;
         this.cartaPuntoVendita = cartaPuntoVendita;
@@ -52,7 +52,7 @@ public class CartaFedelta {
         this.scadenza = scadenza;
     }
 
-    public PuntoVendita getCartaPuntoVendita() {
+    public CommessoPuntoVendita getCartaPuntoVendita() {
         return cartaPuntoVendita;
     }
 }

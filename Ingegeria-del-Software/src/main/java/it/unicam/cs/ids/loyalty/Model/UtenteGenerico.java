@@ -6,8 +6,10 @@ import java.util.Objects;
 import java.util.UUID;
 
 public class UtenteGenerico {
-    private UUID id;
+    private int id;
     private String Nome;
+
+    private String cognome;
     private String indirizzo;
 
     private String email;
@@ -19,9 +21,10 @@ public class UtenteGenerico {
 
     private ControllerRegistrazione controllerRegistrazione;
 
-    public UtenteGenerico(String nome, String indirizzo, String email, Number telefono,  String username, String password) {
-        this.id=UUID.randomUUID();
+    public UtenteGenerico(String nome, String cognome,  String indirizzo, String email, Number telefono,  String username, String password) {
+        this.id=randomInt();
         this.Nome = nome;
+        this.cognome=cognome;
         this.indirizzo = indirizzo;
         this.email=email;
         this.telefono=telefono;
@@ -29,13 +32,27 @@ public class UtenteGenerico {
         this.password=password;
     }
 
+    private int randomInt() {
+        double doubleRandom=0;
+        if(this instanceof TitolarePuntoVendita)
+        {
+            doubleRandom=Math.random()*4000;
+        }
+        int intRandom=(int ) doubleRandom;
+        return intRandom;
+    }
 
-    public UUID getId() {
+
+    public int getId() {
         return id;
     }
 
     public String getNome() {
         return Nome;
+    }
+
+    public String getCognome() {
+        return cognome;
     }
 
     public String getIndirizzo() {
